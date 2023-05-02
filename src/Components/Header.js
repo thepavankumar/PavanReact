@@ -1,44 +1,67 @@
-import React from 'react'
+import {
+  Stack,
+  useMediaQuery,
+  Circle,
+  Flex,
+  Box,
+  Text,
+  Button,
+  Icon,
+  Image
+} from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/react";
+import { FaMobileAlt } from "react-icons/fa";
+
+import pavanImage from "../Assets/pavan.jpg";
 
 function Header() {
+  const { colorMode } = useColorMode();
+  const isDark = colorMode === "dark";
+  const [isSmallScreen] = useMediaQuery("(min-width: 768px)");
+  const handleButtonClick = () => {
+    window.location.href = "tel:+91-8495843258";
+  };
   return (
-    <div className="top-bar" id="example-menu">
-    <div className="top-bar-left">
-      <ul className="dropdown menu" data-dropdown-menu="">
-        <li className="menu-text text-tangerine">Pavan Kumar</li>
-      </ul>
-    </div>
-    <div className="top-bar-right">
-      <ul className="menu">
-        
-      <li className="has-submenu">
-          <a href="#0">Home</a>
-        </li>
-        <li className="has-submenu">
-          <a href="#0">About Us</a>
-        </li>
-        <li className="has-submenu">
-          <a href="#0">Portfolio</a>
-        </li>
-        <li className="has-submenu">
-          <a href="#0">Contact Us</a>
-        </li>
-        <li>
-          <input type="search" placeholder="Search" />
-        </li>
-        <li>
-          <button type="button" className="button">
-            Search
-          </button>
-        </li>
-        <li style={{marginLeft: "10px"}}>
-          {/* <a href="#0" class="button success secondary rounded bordered shadow margin-left-2">Hello, User!</a> */}
-          <a href="#0" class="button secondary rounded bordered shadow margin-left-2">My account</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  )
+    <Stack>
+      <Circle
+         w="300px" h="300px"
+        borderWidth="2px"
+        borderColor="blue.200"
+        backgroundColor="blue.100"
+        position="absolute"
+        opacity="0.1"
+        alignSelf="flex-end"/>
+      <Flex
+        direction={isSmallScreen ? "row" : "column"}
+        p={isSmallScreen ? "32" : "0"}
+        alignSelf="flex-start">
+      <Box mt={isSmallScreen ? "0" : "20"} 
+      align="flex-start">
+        <Text
+          fontSize="30px"
+          fontWeight="bold"
+          color={isDark ? "white" : "black"}
+        >
+          Hello, I am Pavan!
+        </Text>
+        <Button mt={8} colorScheme="blue" onClick={handleButtonClick}>
+          <Icon mr={2} as={FaMobileAlt} />
+          Call Me!
+        </Button>
+      </Box>
+      <Image
+        mt={isSmallScreen ? "0" : "12"}
+        mb={isSmallScreen ? "0" : "12"}
+        borderRadius="full"
+        backgroundColor={"transparent"}
+        src={pavanImage}
+        alt="Pavan - UI"
+        alignSelf="center"
+        boxShadow="lg"
+      />
+        </Flex>
+    </Stack>
+  );
 }
 
-export default Header
+export default Header;

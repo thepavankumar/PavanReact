@@ -10,15 +10,6 @@ body {
 .text-tangerine {
   font-family: 'Tangerine', cursive;
 }
-
-.menu-text{
-  font-size: 40px;
-  text-shadow: 2px 2px #673AB7;
+.c-header{
+  background-color: #e37104;
 }
-
-.menu a{
-  color: black;
-}
-
-
-
