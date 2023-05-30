@@ -18,7 +18,6 @@ import {
 import {
   FaInstagram,
   FaBars,
-  FaHandLizard,
   FaMoon,
   FaSun,
   FaGithub,
@@ -54,7 +53,7 @@ function Navigation() {
             textDecoration="underline"
           >
             <Link to="/">
-            <Icon as={FaHandLizard} boxSize={6} /> Pavan
+             `Pavan`
             </Link>
           </Heading>
         </Box>
