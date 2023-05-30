@@ -24,7 +24,7 @@ function Social() {
         </Link>
       </Tooltip>
       <Tooltip label="LinkedinIn">
-        <Link href="https://github.com/pavansuresh" isExternal>
+        <Link href="https://www.linkedin.com/in/pavan-kumar-992913101/" isExternal>
           <Icon ml={2} as={FaLinkedinIn} boxSize={isSmallScreen ? "50" : "25"}  />
         </Link>
       </Tooltip>

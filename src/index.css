@@ -10,6 +10,11 @@ body {
 .text-tangerine {
   font-family: 'Tangerine', cursive;
 }
+
 .c-header{
   background-color: #e37104;
+}
+
+.toggle-mode{
+  cursor: pointer;
 }

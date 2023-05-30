@@ -14,7 +14,7 @@ import { FaMobileAlt , FaWhatsapp } from "react-icons/fa";
 
 import pavanImage from "../Assets/pavan.jpg";
 
-function Header() {
+function Banner() {
   const { colorMode } = useColorMode();
   const isDark = colorMode === "dark";
   const [isSmallScreen] = useMediaQuery("(min-width: 768px)");
@@ -77,4 +77,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Banner;
