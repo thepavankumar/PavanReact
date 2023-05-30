@@ -37,6 +37,10 @@ function Navigation() {
     setIsOpen(!isOpen);
   };
 
+  const onClose = () => {
+    setIsOpen(false);
+  };
+
   return (
     <Box p={4}>
       <Flex align="center">
@@ -129,7 +133,7 @@ function Navigation() {
             <DrawerCloseButton />
             <DrawerBody mt={4}>
               <Box>
-                <HeaderLinks/>
+                <HeaderLinks onClick={onClose} />
               </Box>
               <Box mt={4}>
                 {/* Social Media Links */}
