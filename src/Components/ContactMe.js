@@ -9,6 +9,10 @@ import {
   Input,
   Textarea,
   Button,
+  Card,
+  Text,
+  Divider,
+  useBreakpointValue 
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
 
@@ -38,10 +42,12 @@ function ContactMe() {
           console.log(`${name} field has an error: ${fieldError.message}`);
         }
       };
+      const paddingTop = useBreakpointValue({ base: '10px', md: '100px' });
     
     return (
-        <Flex direction={{ base: "column", md: "row" }} width="100%">
-            <Box flex={{ base: "1", md: "0.7" }} width="100%"   px={{ base: "10px", md: "100px" }}>
+        <Flex direction={{ base: "column", md: "row" }} width="100%"  paddingTop={paddingTop}>
+            <Box flex={{ base: "1", md: "0.7" }} width="100%"   px={{ base: "10px", md: "100px" }}
+           >
           <form onSubmit={handleSubmit(onSubmit)}>
             <FormControl isInvalid={errors.name} mb={4}>
               <FormLabel htmlFor="name">Name</FormLabel>
@@ -120,7 +126,20 @@ function ContactMe() {
           </form>
           </Box>
           <Box flex={{ base: "1", md: "0.3" }} width="100%"   px={{ base: "10px", md: "100px" }}>
-        {/* Content for the smaller part (30%) */}
+          <Card maxW="sm" borderWidth="1px" borderRadius="lg" boxShadow="lg" p={4}>
+        <Text fontSize="xl">Contact Information</Text>
+        <Divider my={4} />
+
+        <Box>
+          <Text fontWeight="bold">Email:</Text>
+          <Text>pavan.kumar23@gmail.com</Text>
+        </Box>
+
+        <Box mt={4}>
+          <Text fontWeight="bold">Phone:</Text>
+          <Text>+91 8495843258</Text>
+        </Box>
+      </Card>
       </Box>
           </Flex>
       );

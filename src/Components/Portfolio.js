@@ -3,6 +3,7 @@ import {
   Box,
   Grid,
   Image,
+  Heading,
   Modal,
   ModalOverlay,
   ModalContent,
@@ -79,7 +80,10 @@ const Portfolio = () => {
       <Modal isOpen={isOpen} onClose={onClose} size="full">
         <ModalOverlay />
         <ModalContent>
-          <ModalCloseButton  size="lg"/>
+          <ModalCloseButton   bg="red.500"
+            size="lg"
+            _hover={{ bg: 'red.600' }}
+            _active={{ bg: 'red.700' }}/>
           <ModalBody>
             {selectedImage && (
               <Image
