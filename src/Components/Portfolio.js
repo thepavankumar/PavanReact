@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import {
   Box,
   Grid,
+  Center,
+  Text,
+  Heading,
   Image,
   Modal,
   ModalOverlay,
@@ -66,11 +69,21 @@ const Portfolio = () => {
 
   return (
     <Box>
+       <Grid p={4}>
+      <Center>
+        <Heading as="h2" size="xl" mb={4}>
+          My Portfolio
+        </Heading>
+      </Center>
+      <Text textAlign="center">
+      Hello, I have compiled a selection of my Photoshop, HTML, CSS, and JavaScript works.
+      </Text>
+    </Grid>
       <Grid
         templateColumns={{ base: '1fr', md: 'repeat(3, 1fr)' }}
         gap={4}
         width="100%"
-        mt={{ base: '40px', md: '120px' }}
+        mt={{ base: '40px', md: '60px' }}
       >
         {images.map((image) => (
           <Box key={image.id}>

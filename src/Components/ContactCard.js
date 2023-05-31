@@ -9,7 +9,7 @@ function ContactCard({ icon, label, value, href }) {
         <Box boxSize={6} mr={2}>{icon}</Box>
         <Box>
             <Text fontWeight="bold" mb={1}>{label}:</Text>
-            <Text>{value}</Text>
+            <Text style={{ fontSize: "15px" }}>{value}</Text>
           </Box>
       </Box>
     </Link>
