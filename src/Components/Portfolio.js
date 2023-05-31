@@ -3,13 +3,13 @@ import {
   Box,
   Grid,
   Image,
-  Heading,
   Modal,
   ModalOverlay,
   ModalContent,
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  Button
 } from '@chakra-ui/react';
 
 import image1 from '../Assets/portfolio1.png';
@@ -55,6 +55,15 @@ const Portfolio = () => {
     onOpen();
   };
 
+  const handleDownload = () => {
+    if (selectedImage) {
+      const link = document.createElement("a");
+      link.href = selectedImage.src;
+      link.download = "image.jpg";
+      link.click();
+    }
+  };
+
   return (
     <Box>
       <Grid
@@ -81,7 +90,9 @@ const Portfolio = () => {
         <ModalOverlay />
         <ModalContent>
           <ModalCloseButton   bg="red.500"
+          position="fixed"
             size="lg"
+            color="white"
             _hover={{ bg: 'red.600' }}
             _active={{ bg: 'red.700' }}/>
           <ModalBody>
@@ -93,6 +104,20 @@ const Portfolio = () => {
                 height="auto"
               />
             )}
+            <Button
+            position="fixed"
+            bottom={4}
+            bg="red.500"
+            color="white"
+            left={4}
+            right={4}
+            px={8}
+            py={4}
+            borderRadius="md"
+            onClick={handleDownload}
+          >
+            Download the image
+          </Button>
           </ModalBody>
         </ModalContent>
       </Modal>
