@@ -35,6 +35,7 @@ function AboutMe() {
       </Text>
       <Box borderWidth="1px" borderColor="gray.200" p={4} borderRadius="md"   marginTop="30px">
       <VStack spacing={4} align="stretch">
+        <ProgressBar label="Adobe Photoshop" value={80} colorScheme="pink" />
         <ProgressBar label="HTML" value={90} colorScheme="teal" />
         <ProgressBar label="CSS" value={90} colorScheme="blue" />
         <ProgressBar label="JavaScript" value={70} colorScheme="yellow" />

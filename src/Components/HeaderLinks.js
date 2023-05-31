@@ -9,13 +9,16 @@ function HeaderLinks({ onClick }) {
         direction={['column', 'row']}
         py={2}
       >
-      <Link to="/about-me" mx={2} marginStart={[0, '2']} onClick={onClick}>
+      <Link to="/about-me" mx={2} marginStart={[0, '2']} onClick={onClick}
+      >
          About Me
       </Link>
-      <Link to="/portfolio" mx={2} marginStart={[0, '2']} onClick={onClick}>
-        portfolio
+      <Link to="/portfolio" mx={2} marginStart={[0, '2']} onClick={onClick}
+      >
+        Portfolio
       </Link>
-      <Link to="/contact-me" mx={2} marginStart={[0, '2']} onClick={onClick}>
+      <Link to="/contact-me" mx={2} marginStart={[0, '2']} onClick={onClick}
+      >
           Contact
       </Link>
       </Stack>
