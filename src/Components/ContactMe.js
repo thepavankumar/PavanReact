@@ -132,7 +132,7 @@ function ContactMe() {
 
         <Box>
           <Text fontWeight="bold">Email:</Text>
-          <Text>pavan.kumar23@gmail.com</Text>
+          <Text>pavan.kumar23@outlook.com</Text>
         </Box>
 
         <Box mt={4}>

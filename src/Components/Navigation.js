@@ -1,19 +1,18 @@
 import { useState } from "react";
-import { Link } from 'react-router-dom';
 import {
   Box,
   Flex,
   IconButton,
-  Heading,
   Icon,
   Spacer,
   Drawer,
+  Link,
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
   DrawerBody,
   useColorMode,
-  useColorModeValue 
+  useColorModeValue,
 } from "@chakra-ui/react";
 import {
   FaInstagram,
@@ -22,14 +21,18 @@ import {
   FaSun,
   FaGithub,
   FaLinkedinIn,
+  FaPhone, 
+  FaEnvelope 
 } from "react-icons/fa";
 
-import HeaderLinks from './HeaderLinks'
+import HeaderLinks from "./HeaderLinks";
+import ContactCard from "./ContactCard";
+import LogoHolder from "./LogoHolder";
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const { colorMode, toggleColorMode } = useColorMode();
-  const iconColor = useColorModeValue('black', 'black');
+  const iconColor = useColorModeValue("black", "black");
   const isDark = colorMode === "dark";
 
   const toggleDrawer = () => {
@@ -43,24 +46,11 @@ function Navigation() {
   return (
     <Box p={4}>
       <Flex align="center">
-        <Box>
-          <Heading
-            ml="3"
-            fontSize="30px"
-            size="md"
-            fontWeight="semibold"
-            color="cyan.400"
-            textDecoration="underline"
-          >
-            <Link to="/">
-             `Pavan`
-            </Link>
-          </Heading>
-        </Box>
+        <LogoHolder/>
         <Spacer></Spacer>
         <Flex display={["none", "none", "flex"]}>
           <HeaderLinks />
-           {/* Social Media Links */}
+          {/* Social Media Links */}
           <IconButton
             bg="gray.300"
             borderRadius="full"
@@ -74,7 +64,7 @@ function Navigation() {
             mx={2}
             href="https://www.instagram.com/thepavankumar/"
             aria-label="Twitter"
-            color={iconColor} 
+            color={iconColor}
             icon={<FaInstagram />}
           />
           <IconButton
@@ -90,7 +80,7 @@ function Navigation() {
             mx={2}
             href="https://github.com/pavansuresh"
             aria-label="Instagram"
-            color={iconColor} 
+            color={iconColor}
             icon={<FaGithub />}
           />
           <IconButton
@@ -105,7 +95,7 @@ function Navigation() {
             isExternal
             mx={2}
             href="https://www.linkedin.com/in/pavan-kumar-992913101/"
-            color={iconColor} 
+            color={iconColor}
             icon={<FaLinkedinIn />}
           />
         </Flex>
@@ -128,42 +118,56 @@ function Navigation() {
       {/* Mobile Menu */}
       <Drawer isOpen={isOpen} placement="right" onClose={toggleDrawer}>
         <DrawerOverlay>
-          <DrawerContent>
+          <DrawerContent w="99%">
             <DrawerCloseButton />
             <DrawerBody mt={4}>
               <Box>
                 <HeaderLinks onClick={onClose} />
               </Box>
-              <Box mt={4}>
-                {/* Social Media Links */}
-                  <IconButton
-                    as={Link}
-                    display="inline-block"
-                    href="https://www.instagram.com/thepavankumar/"
-                    aria-label="Twitter"
-                    isExternal
-                    icon={<FaInstagram />}
-                    backgroundColor="transparent"
-                  />
-                  <IconButton
-                    as={Link}
-                    display="inline-block"
-                    href="https://github.com/pavansuresh"
-                    aria-label="Instagram"
-                    icon={<FaGithub />}
-                    isExternal
-                    backgroundColor="transparent"
-                  />
-                  <IconButton
-                    as={Link}
-                    display="inline-block"
-                    href="https://www.linkedin.com/in/pavan-kumar-992913101/"
-                    isExternal
-                    aria-label="Facebook"
-                    icon={<FaLinkedinIn />}
-                    backgroundColor="transparent"
-                  />
-              </Box>
+              {/* socila media link */}
+              <Flex p={4}>
+                <Link
+                  bg="gray.200"
+                  mx={2}
+                  borderRadius="50%"
+                  p={1}
+                  href="https://www.instagram.com/thepavankumar/"
+                  isExternal
+                >
+                  <Box p={2}>
+                    <Icon as={FaInstagram} boxSize={6} />
+                  </Box>
+                </Link>
+                <Link bg="gray.200" 
+                  borderRadius="50%"
+                  p={1}  mx={2} href="https://github.com/pavansuresh" isExternal>
+                  <Box p={2}>
+                    <Icon as={FaGithub} boxSize={6} />
+                  </Box>
+                </Link>
+                <Link bg="gray.200"  
+                  borderRadius="50%"
+                  p={1} mx={2} href="https://www.linkedin.com/in/pavan-kumar-992913101/" isExternal>
+                  <Box p={2}>
+                    <Icon as={FaLinkedinIn} boxSize={6} />
+                  </Box>
+                </Link>
+              </Flex>
+              {/* contact card */}
+              <Box bg="gray.200" p={4} borderRadius="md">
+      <ContactCard
+        icon={<FaPhone />}
+        label="Phone"
+        value="+918495843258"
+        href="tel:+918495843258"
+      />
+      <ContactCard
+        icon={<FaEnvelope />}
+        label="Email"
+        value="pavan.kumar23@outlook.com"
+        href="mailto:pavan.kumar23@outlook.com"
+      />
+    </Box>
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>
