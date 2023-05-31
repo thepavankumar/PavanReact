@@ -13,6 +13,7 @@ import Contact from "./Components/ContactMe.js";
 import Portfolio from "./Components/Portfolio.js";
 import Navigation from "./Components/Navigation";
 import AboutMe from "./Components/AboutMe";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
             </Route>
           </Routes>
         </VStack>
+        <Footer/>
       </BrowserRouter>
     </React.Fragment>
   );

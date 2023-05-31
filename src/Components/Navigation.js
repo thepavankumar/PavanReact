@@ -135,21 +135,21 @@ function Navigation() {
                   isExternal
                 >
                   <Box p={2}>
-                    <Icon as={FaInstagram} boxSize={6} />
+                    <Icon as={FaInstagram} boxSize={6} color={iconColor}/>
                   </Box>
                 </Link>
                 <Link bg="gray.200" 
                   borderRadius="50%"
                   p={1}  mx={2} href="https://github.com/pavansuresh" isExternal>
                   <Box p={2}>
-                    <Icon as={FaGithub} boxSize={6} />
+                    <Icon as={FaGithub} boxSize={6} color={iconColor}/>
                   </Box>
                 </Link>
                 <Link bg="gray.200"  
                   borderRadius="50%"
                   p={1} mx={2} href="https://www.linkedin.com/in/pavan-kumar-992913101/" isExternal>
                   <Box p={2}>
-                    <Icon as={FaLinkedinIn} boxSize={6} />
+                    <Icon as={FaLinkedinIn} boxSize={6} color={iconColor} />
                   </Box>
                 </Link>
               </Flex>
