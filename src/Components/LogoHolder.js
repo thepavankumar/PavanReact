@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { Icon } from '@chakra-ui/react';
+import { FaLaugh } from 'react-icons/fa';
 
 import {
     Box,
@@ -11,12 +13,13 @@ function LogoHolder() {
     <Box>
           <Heading
             ml="3"
-            fontSize="30px"
+            fontSize="25px"
             size="md"
             fontWeight="semibold"
-            color="cyan.400"
+            color="blue.500"
           >
-            <Link to="/">PavanKumar.js</Link>
+             <Icon as={FaLaugh} boxSize={8}  padding="15px 3px 0 0"/>
+            <Link to="/">PAVAN</Link>
           </Heading>
         </Box>
   )
