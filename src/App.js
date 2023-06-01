@@ -19,7 +19,7 @@ function App() {
   return (
     <React.Fragment>
       <BrowserRouter>
-        <VStack>
+        <VStack  maxW="1200px"  mx="auto">
           <Box w="100%">
              <Navigation/>
           </Box>

@@ -123,7 +123,7 @@ const Portfolio = () => {
         mt={{ base: '40px', md: '60px' }}
       >
         {images.map((image) => (
-          <Box key={image.id}>
+          <Box key={image.id} borderWidth="2px"  p="4" rounded="md">
             <Image
               src={image.thumbscr}
               alt={image.alt}
