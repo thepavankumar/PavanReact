@@ -23,7 +23,7 @@ function Banner() {
   };
   const SendWhatsAppMessage = () => {
     const phoneNumber = "+918495843258"; 
-    const message = "Hello..!How are you Mr.Pavan?";
+    const message = "Hello..!";
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   }

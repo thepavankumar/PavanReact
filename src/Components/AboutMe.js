@@ -35,11 +35,14 @@ function AboutMe() {
       </Text>
       <Box borderWidth="1px" borderColor="gray.200" p={4} borderRadius="md"   marginTop="30px">
       <VStack spacing={4} align="stretch">
-        <ProgressBar label="Adobe Photoshop" value={80} colorScheme="pink" />
+        <ProgressBar label="Adobe Photoshop" value={95} colorScheme="pink" />
+        <ProgressBar label="Adobe illustrator" value={90} colorScheme="purple" />
+        <ProgressBar label="figma" value={50} colorScheme="linkedin" />
         <ProgressBar label="HTML" value={90} colorScheme="teal" />
         <ProgressBar label="CSS" value={90} colorScheme="blue" />
         <ProgressBar label="JavaScript" value={70} colorScheme="yellow" />
-        <ProgressBar label="React JS" value={60} colorScheme="orange" />
+        <ProgressBar label="Vue JS" value={70} colorScheme="green" />
+        <ProgressBar label="React JS" value={40} colorScheme="orange" />
         <ProgressBar label="WordPress" value={30} colorScheme="red" />
       </VStack>
     </Box>
